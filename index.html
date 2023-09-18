@@ -690,15 +690,10 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
 
     <script>
-        let btnDownload = document.getElementById("download");
-            btnDownload.addEventListener("click", startDownload);
-            async function startDownload() {
-                let url = "assets/file.pdf";
-                let fileName = "My Document";
-                const res = await fetch(url);
-                const blob = await res.blob();
-                saveAs(blob, fileName);
-            }
+        document.getElementById('download').onclick = function () {
+             window.open('assets/file.pdf', '_blank'); 
+            };
+        
     </script>
 </body>
 
